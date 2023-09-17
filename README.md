@@ -17,7 +17,9 @@ CancelableCircularProgressView is a SwiftUI view that combines a circular progre
 ## Usage
 
 ```swift
-CancelableCircularProgressView(value: 0.5)
+@State private var progress: Double = 0.0
+
+CancelableCircularProgressView(value: progress)
 ```
 
 This initializes a `CancelableCircularProgressView` with a 50% progress. The view will use default parameters for line width, icon size, and colors.
@@ -37,7 +39,13 @@ You can customize the `CancelableCircularProgressView` by using the following pa
 For example:
 
 ```swift
-CancelableCircularProgressView(value: 0.75, lineWidth: 10, iconSize: 50, backgroundColor: .red, foregroundColor: .blue)
+CancelableCircularProgressView(
+    value: 0.75, 
+    lineWidth: 10, 
+    iconSize: 50, 
+    backgroundColor: .red, 
+    foregroundColor: .blue
+)
 ```
 
 ## Implementation Details
